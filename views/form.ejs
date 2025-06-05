@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="font-family:'Courier New', Courier, monospace;color: blue;">User Form</h2>
+    <form  id="fomm"action="/submit"method="POST">
+        <label for="name">Name</label>
+        <input type="text"id="name"name="name"style="margin-bottom:20px"><br>
+        <label for="email">Email</label>
+        <input type="email"id="email"name="email"style="margin-bottom:20px"><br>
+        <label for="age">Age</label>
+        <input type="text"id="age"name="age"style="margin-bottom:20px"><br>
+        <button type="submit"style="color:white;background-color:black">Submit</button>
+
+    </form>
+</body>
+<script>
+    document.getElementById("fomm").addEventListener("submit",function(ev){
+        const age=parseInt(document.getElementById("age").value);
+        if(age<18){
+            alert("enter age more than 18");
+            e.preventDefault();
+        }
+    })
+    </script>
+</html>
